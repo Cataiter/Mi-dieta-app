@@ -1,3 +1,4 @@
+
 import streamlit as st
 
 st.set_page_config(
@@ -45,7 +46,7 @@ for i, key in enumerate(keys):
     with cols[col_index]:
         with st.expander(f"**{key}**", expanded=True):
             for j, item in enumerate(menu[key]):
-                checkbox_key = f"{key}_{j}"
+                checkbox_key = f"dieta_{key}_{j}" 
                 st.checkbox(item, key=checkbox_key)
                 
             if key == "4 COMIDA - Merienda":
@@ -62,8 +63,3 @@ if st.button("Reiniciar mi Progreso del Día"):
 st.markdown("---")
 st.success("¡Buen seguimiento! Tu plan nutricional ahora es interactivo.")
 st.caption("Hecho con Streamlit y Python.")
-
-st.caption("Hecho con Streamlit y Python.")
-
-
-
