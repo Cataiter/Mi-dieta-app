@@ -52,9 +52,14 @@ for i, key in enumerate(keys):
                  st.markdown("---")
 
 if st.button("Reiniciar mi Progreso del Día"):
-    st.experimental_rerun()
+    st.rerun()  
+
+st.markdown("---")
+st.success("¡Buen seguimiento! Tu plan nutricional ahora es interactivo.")
+st.caption("Hecho con Streamlit y Python.")
 
 st.markdown("---")
 st.success("¡Buen seguimiento! Tu plan nutricional ahora es interactivo.")
 
 st.caption("Hecho con Streamlit y Python.")
+
