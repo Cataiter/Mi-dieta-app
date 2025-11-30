@@ -53,7 +53,7 @@ for i, key in enumerate(keys):
 
 if st.button("Reiniciar mi Progreso del Día"):
     for key in st.session_state.keys():
-        if "_" in key: 
+        if key.startswith("dieta_"): 
             st.session_state[key] = False
             
     st.rerun()
@@ -64,5 +64,6 @@ st.success("¡Buen seguimiento! Tu plan nutricional ahora es interactivo.")
 st.caption("Hecho con Streamlit y Python.")
 
 st.caption("Hecho con Streamlit y Python.")
+
 
 
