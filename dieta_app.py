@@ -1,21 +1,17 @@
-# -*- coding: utf-8 -*-
 import streamlit as st
 
-# --- Configuración de la Página ---
 st.set_page_config(
     page_title="Menú de Dieta Interactivo",
     page_icon="✅",
     layout="wide"
 )
 
-# --- Título Principal y Encabezado ---
 st.title("✅ Plan de Dieta Interactivo")
 st.markdown("---") 
 
 st.info("Marca las casillas a medida que consumes tus comidas para llevar un seguimiento de tu día.")
 st.markdown("---") 
 
-# --- Estructura del Menú ---
 menu = {
     "1 COMIDA - Desayuno": [
         "Base: 20 gr de copos de avena / 30 gr de harina de avena o dos rebanadas de pan de espelta.",
@@ -40,7 +36,6 @@ menu = {
     ]
 }
 
-# --- Diseño con Checkboxes ---
 cols = st.columns(3) 
 
 keys = list(menu.keys())
@@ -56,11 +51,10 @@ for i, key in enumerate(keys):
             if key == "4 COMIDA - Merienda":
                  st.markdown("---")
 
-# --- Botón de Reinicio ---
 if st.button("Reiniciar mi Progreso del Día"):
     st.experimental_rerun()
 
-# --- Pie de Página ---
 st.markdown("---")
 st.success("¡Buen seguimiento! Tu plan nutricional ahora es interactivo.")
+
 st.caption("Hecho con Streamlit y Python.")
