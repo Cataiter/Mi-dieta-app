@@ -52,14 +52,17 @@ for i, key in enumerate(keys):
                  st.markdown("---")
 
 if st.button("Reiniciar mi Progreso del Día"):
-    st.rerun()  
+    for key in st.session_state.keys():
+        if "_" in key: 
+            st.session_state[key] = False
+            
+    st.rerun()
+
 
 st.markdown("---")
 st.success("¡Buen seguimiento! Tu plan nutricional ahora es interactivo.")
 st.caption("Hecho con Streamlit y Python.")
 
-st.markdown("---")
-st.success("¡Buen seguimiento! Tu plan nutricional ahora es interactivo.")
-
 st.caption("Hecho con Streamlit y Python.")
+
 
