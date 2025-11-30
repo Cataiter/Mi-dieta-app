@@ -56,12 +56,12 @@ if st.button("Reiniciar mi Progreso del Día"):
     
     for key in list(st.session_state.keys()): 
         if key.startswith("dieta_"): 
-            del st.session_state[key] 
+            del st.session_state[key]
             
     st.rerun()
-
 
 st.markdown("---")
 st.success("¡Buen seguimiento! Tu plan nutricional ahora es interactivo.")
 st.caption("Hecho con Streamlit y Python.")
+
 
